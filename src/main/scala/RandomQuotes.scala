@@ -15,18 +15,18 @@ object QuoteGenerator:
         }
         
     def chooseThreeQuotes =
-        var choices: Array[Int] = Array.empty
+        var choices: Array[Int] = Array(0, 1, 2) 
         println("Please choose three numbers between 1 and 10: ")
-        while choices.size < 3 do
-            val choice = (StdIn.readInt() - 1)
-            breakable {
-                if !(0 to 9).contains(choice) then
-                    println("Invalid choice, please try again.")
-                    break
-                else
-                    choices = choices :+ choice
-            }
-        end while 
+        // while choices.size < 3 do
+        //     val choice = (StdIn.readInt() - 1)
+        //     breakable {
+        //         if !(0 to 9).contains(choice) then
+        //             println("Invalid choice, please try again.")
+        //             break
+        //         else
+        //             choices = choices :+ choice
+        //     }
+        // end while 
         shuffleCollections()
         val str1 = s"${subjects(choices(0))} ${verbs(choices(0))} ${complements(choices(0))}"
         shuffleCollections()

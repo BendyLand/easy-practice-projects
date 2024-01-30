@@ -1,4 +1,4 @@
-1	Ben
-2	Olivia
-3	Mom
-5	Stormy
+1	Cook
+2	Clean
+3	Fix
+5	Draw

@@ -2,24 +2,44 @@ package examples
 
 object Examples:
 
+    import temperature.*
+    def temperatureConverterExample =
+        val tempConverter = TemperatureConverter
+        println(tempConverter.convertToCelsius(32)) // 0
+        println()
+        println(tempConverter.convertToCelsius(212)) // 100
+        println()
+        println(tempConverter.convertToCelsius(61)) // 16
+        println()
+        println(tempConverter.convertToFahrenheit(0)) // 32
+        println()
+        println(tempConverter.convertToFahrenheit(100)) // 212
+        println()
+        println(tempConverter.convertToFahrenheit(16)) // 61
+        println()
+
+
     import quotes.*
     def randomQuotesExample = 
         val quoteGenerator = QuoteGenerator
         val quotes = quoteGenerator.chooseThreeQuotes
         quoteGenerator.displayQuotes
+        println()
+
 
     import todo.*
     def todoExample =
         val todo = TodoList()
-        todo.add("Ben")
-        todo.add("Olivia")
-        todo.add("Mom")
-        todo.add("Bob")
+        todo.add("Cook")
+        todo.add("Clean")
+        todo.add("Fix")
+        todo.add("Build")
         println(todo.parse)
         todo.remove(4)
         println(todo.parse)
-        todo.add("Stormy")
+        todo.add("Draw")
         println(todo.parse)
+
 
     import calculator.Calculator
     def calculatorExample =
@@ -35,18 +55,20 @@ object Examples:
         println("0 / 5 = " + calculator.divide(n3, n1))
         println()
 
+
     import taskManager.TaskManager
     def taskManagerExample =
         val taskManager = TaskManager()
-        taskManager.add("one")
-        taskManager.add("two")
-        taskManager.add("three")
-        taskManager.add("four")
+        taskManager.add("Shop")
+        taskManager.add("Study")
+        taskManager.add("Work")
+        taskManager.add("Game")
         taskManager.display
         taskManager.remove(3)
         println() // line break
         taskManager.display
         println()
+
 
     def summarize =
         var projects = List(
@@ -72,14 +94,10 @@ object Examples:
         completeTask("Task Manager")
         completeTask("Calculator")
         completeTask("Todo List")
+        completeTask("Random Quote Generator")
+        completeTask("Temperature Converter")
 
         println(s"\nNumber of projects completed: ${completed.size}\n")
         println("Unfinished projects remaining: \n")
         projects.foreach(println)
         println()
-
-
-
-
-
-

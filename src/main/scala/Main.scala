@@ -15,4 +15,5 @@ def main() =
     Examples.calculatorExample
     Examples.todoExample
     Examples.randomQuotesExample
+    Examples.temperatureConverterExample
     Examples.summarize
