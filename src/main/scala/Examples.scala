@@ -2,6 +2,11 @@ package examples
 
 object Examples:
 
+    import dice.*
+    def diceRollerExample = 
+        val diceRoller = DiceRoller
+        diceRoller.roll 
+
     import temperature.*
     def temperatureConverterExample =
         val tempConverter = TemperatureConverter
@@ -22,7 +27,6 @@ object Examples:
     import quotes.*
     def randomQuotesExample = 
         val quoteGenerator = QuoteGenerator
-        val quotes = quoteGenerator.chooseThreeQuotes
         quoteGenerator.displayQuotes
         println()
 

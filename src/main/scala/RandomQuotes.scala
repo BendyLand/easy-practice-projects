@@ -7,16 +7,19 @@ import scala.util.Random.shuffle
 import Sections.*
 
 object QuoteGenerator:
-    var quotes = Array.empty[String]
     def displayQuotes = 
+        val quotes = chooseThreeQuotes()
         val rng = (1 to 3).toList
         rng.zip(quotes).foreach { (i, quote) =>
             println(s"$i.) $quote")
         }
         
-    def chooseThreeQuotes =
+    private def chooseThreeQuotes(): Array[String] =
         var choices: Array[Int] = Array(0, 1, 2) 
-        println("Please choose three numbers between 1 and 10: ")
+        // Can make method public and have user choose the numbers for the quotes.
+        // It is private for ease of testing
+        // 
+        // println("Please choose three numbers between 1 and 10: ")
         // while choices.size < 3 do
         //     val choice = (StdIn.readInt() - 1)
         //     breakable {
@@ -34,7 +37,7 @@ object QuoteGenerator:
         shuffleCollections()
         val str3 = s"${subjects(choices(2))} ${verbs(choices(2))} ${complements(choices(2))}"
 
-        quotes = Array(str1, str2, str3)
+        Array(str1, str2, str3)
         
 
 object Sections:
