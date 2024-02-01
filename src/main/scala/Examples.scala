@@ -1,9 +1,18 @@
 package examples
 
 object Examples:
+
+    import palindrome.* 
+    def palindromeCheckerExample =
+        val palindromeChecker = PalindromeChecker
+        println(palindromeChecker.check("tacocat"))
+        println(palindromeChecker.check("Noxon"))
+        println(palindromeChecker.check("the quick brown fox"))
+        println(palindromeChecker.check("cigar to go tragic"))
+
+
     import filemanager.*
     import java.io.File
-
     def fileManagerExample =
         val fileManager = FileManager
         fileManager.createFile("./testfile.txt")
