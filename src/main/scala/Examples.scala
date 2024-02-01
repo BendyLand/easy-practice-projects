@@ -1,11 +1,21 @@
 package examples
 
 object Examples:
+    import filemanager.*
+    import java.io.File
+
+    def fileManagerExample =
+        val fileManager = FileManager
+        fileManager.createFile("./testfile.txt")
+        fileManager.createFile("./testfile2.txt")
+        fileManager.listFiles("src/main/scala")
+        fileManager.deleteFile(File("./testfile.txt"))
 
     import dice.*
     def diceRollerExample = 
         val diceRoller = DiceRoller
         diceRoller.roll 
+        println()
 
     import temperature.*
     def temperatureConverterExample =
