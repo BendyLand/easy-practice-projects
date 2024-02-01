@@ -13,4 +13,5 @@ def main() =
     Examples.temperatureConverterExample
     Examples.diceRollerExample
     Examples.fileManagerExample
+    Examples.palindromeCheckerExample
     Examples.summarize
