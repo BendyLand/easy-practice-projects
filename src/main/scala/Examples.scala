@@ -2,6 +2,16 @@ package examples
 
 object Examples:
 
+    import morse.*
+    def morseCodeTranslatorExample = 
+        val morseCodeTranslator = MorseCodeTranslator
+        val encrypted = morseCodeTranslator.encrypt("This is a test")
+        println("Encrypted message: " + encrypted) 
+        val decrypted = morseCodeTranslator.decrypt(encrypted)
+        println("Decrypted message: " + decrypted)
+        println()
+
+
     import palindrome.* 
     def palindromeCheckerExample =
         val palindromeChecker = PalindromeChecker
@@ -9,6 +19,7 @@ object Examples:
         println(palindromeChecker.check("Noxon"))
         println(palindromeChecker.check("the quick brown fox"))
         println(palindromeChecker.check("cigar to go tragic"))
+        println()
 
 
     import filemanager.*
