@@ -130,6 +130,10 @@ object Examples:
         completeTask("Todo List")
         completeTask("Random Quote Generator")
         completeTask("Temperature Converter")
+        completeTask("Dice Roller")
+        completeTask("Basic File Manager")
+        completeTask("Palindrome Checker")
+        completeTask("Morse Code Translator")
 
         println(s"\nNumber of projects completed: ${completed.size}\n")
         println("Unfinished projects remaining: \n")
